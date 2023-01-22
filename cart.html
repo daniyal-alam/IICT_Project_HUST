@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - HUST Fabrics</title>
+    <link rel="shortcut icon" type="x-icon" href="./images/Logo.jpg">
+    <link rel="stylesheet" type="text/css" href="cart.css">
+    <link rel="stylesheet" href="./assets/css/simple-line-icons.css">
+    <script>
+        function orderconfirmation() {
+            alert("Your order was successfully placed. Thank You for ordering HUST Fabrics! You will receive a mail form www.hustfabrics.com.pk in which all information are given related your total payment and product tracking. For any further query you can visit our website www.hustfabrics.com.pk")
+        }
+
+        function subscription() {
+			alert("Thanks for subscribing to our newsletter!");
+		}
+
+        function validateemail() {
+            var form = document.getElementById('form');
+            var email = document.getElementById('Email').value;
+            var text = document.getElementById('text');
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "Your Email Address is Valid.";
+                text.style.color = "red";
+            } 
+            else {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "Please Enter Valid Email Address.";
+                text.style.color = "red";
+            }
+            }
+
+        function validateproductcode() {
+            var form = document.getElementById('form');
+            var productcode = document.getElementById('Product Code').value;
+            var text = document.getElementById('prod-code');
+            var pattern = /SK/;
+
+            if(productcode.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "Your Product Code is Valid";
+                text.style.color = "red";
+            } 
+            else {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "Please Enter Valid Product Code";
+                text.style.color = "red";
+            }
+
+            if(email == "") {
+                form.classList.remove("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "";
+                text.style.color = "#00ff00";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="mar">
+        <marquee>Limited Time Stock For All New And Old Customers Shop Now On HUST Fabrics And Get A 70% Flat Discount
+            Hurry Up This Is A Limited Time Sale Download Our App Now </marquee>
+    </div>
+
+    <div class="main-head">
+        <div class="main-head-col-left">
+        <h5>Free Delivery On All Orders Over RS:2500 (LIMITED TIME ONLY)</h5>
+        </div>
+    
+        <div class="main-head-col-right">
+            <ul type="none">
+                <li><a href="">USD</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">My Account</a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Men's</button>
+                    <div class="dropdown-content">
+                    <a href="easternwear.html">Eastern Wear</a>
+                    <a href="westernwear.html">Western Wear</a>
+                    <a href="winterwear.html">Winter Wear</a>
+                    <a href="fragrances & accessories.html">Fragrances & Accessories</a>
+                    </div>
+                    </div>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="form">
+        <div id="info-left">
+        <div id="ship-add">
+            <i class="icon-bag"></i>
+            <p>Shipping Address</p>
+        </div>
+
+        <div class="user-box">
+            <label for="Email">Email</label ><br>
+            <input type="email" id="Email" required="" onkeydown="validateemail()">
+            <span id="text"></span>
+        </div>
+
+        <div class="user-box">
+            <label for="First Name">First Name</label ><br>
+            <input type="text" id="First Name" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="Last Name">Last Name</label ><br>
+            <input type="text" id="Last Name" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="Address">Address</label ><br>
+            <input type="text" id="Address" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="Phone Number">Phone Number</label ><br>
+            <input type="tel" id="Phone Number" placeholder="03xx-xxxxxxx" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="Product Code">Product Code</label><br>
+            <input type="text" id="Product Code" required="" onkeydown="validateproductcode()">
+            <span id="prod-code"></span>
+        </div>
+        
+        <div class="user-box">
+            <label for="Product Quantity">Product Quantity</label><br>
+            <input type="number" id="Product Quantity" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="City">City</label ><br>
+            <input type="text" id="City" required="">
+        </div>
+
+        <div class="user-box">
+            <label for="Postal Code">Postal Code</label ><br>
+            <input type="text" id="Postal Code" required="">
+        </div>
+
+        <div>
+            <input type="checkbox" id="ship-address" required="">
+            <label for="ship-address">My billing and shipping address are the same</label>
+        </div>
+        </div>
+
+        <div id="info-right">
+            <div id="payment">
+                <i class="icon-credit-card"></i>
+                <p>Payment Methods</p>
+            </div>
+
+            <div class="user-input">
+                <input type="radio" id="cash1" name="payment method" value="Cash on Delivery">
+                <label for="cash1">Cash on Delivery</label>
+            </div>
+
+            <div class="user-input">
+                <input type="radio" id="cash2" name="payment method" value="Cash on Delivery through Card">
+                <label for="cash2">Cash on Delivery through Card</label>
+            </div>
+
+            <div id="btn">
+                <button type="button" onclick="orderconfirmation()">Place Order</button>
+            </div>
+        </div>
+    </form>
+
+    <section>
+        <div class="sub-footer">
+            <p id="subscribe">Subscribe Now</p>
+    
+            <p id="inbox-msg">Join HUST-Fabrics and get all the latest news, trends and offers straight to your inbox.</p>
+    
+            <form >
+                <input type="email" required="" name="Email" placeholder="Enter your email address" id="form">
+                <button id="button" onclick="subscription()">SUBSCRIBE</button>
+            </form>			
+        </div>
+    
+        <footer>
+        <div class="footer">
+            <div class="div-1">
+                <h1><em>HUST-Fabrics</em></h1>
+                <div class="icon">
+                    <i class="icon-social-facebook"></i>
+                    <a href="#"></a>
+                    <i class="icon-social-instagram"></i>
+                    <a href="#"></a>
+                    <i class="icon-social-twitter"></i>
+                    <a href="#"></a>
+                </div>
+                <br><a href="404 Page.html"><button>Customer Feedback</button></a>
+            </div>
+            
+            <div class="footer-about">
+                <p>ABOUT HUST-FABRICS</p>
+                <a href="about.html">About us</a>
+                <br>
+                <a href="404 Page.html">Company</a>
+                <br>
+                <a href="404 Page.html">Store Locator</a>
+            </div>
+    
+            <div class="footer-account">
+                <p>MY ACCOUNT</p>
+                <a href="404 Page.html">Login</a>
+                <br>
+                <a href="404 Page.html">Order History</a>
+                <br>
+                <a href="404 Page.html">Order Status</a>
+            </div>
+    
+            <div class="footer-care">
+                <p>CUSTOMER CARE</p>
+                <a href="404 Page.html">Contact us</a>
+                <br>
+                <a href="404 Page.html">Complaint/Inquiry form</a>
+                <br>
+                <a href="404 Page.html">FAQ</a>
+                <br>
+                <a href="404 Page.html">Shipping Policy</a>
+                <br>
+                <a href="404 Page.html">Return Exchange</a>
+                <br>
+            </div>
+        </div>
+        </footer>
+    
+</body>
+</html>

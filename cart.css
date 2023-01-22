@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F2F3F4;
+    max-width: 100%;
+    font-family: Georgia,serif;
+    user-select: none;
+}
+
+.mar{
+    height: 5%;
+    width: 100%;
+    overflow: hidden;
+    background-color: palegoldenrod;
+}
+
+.mar marquee{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+.main-head{
+	max-width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+}
+
+.main-head-col-left{
+	padding-top: 10px;
+	padding-left: 75px;
+}
+
+.main-head-col-right ul{
+	display: flex;
+	gap: 33px;
+	padding: 10px;
+}
+
+.main-head-col-right ul li a{
+	justify-content: space-between;
+	text-decoration: none;
+	color: white;
+	padding-right: 5px;
+	font-weight: bold;
+}
+header nav{
+    height: 50px;
+    background-color: #fff;
+    /* text-align: right; another way*/
+    display: flex;
+    /* for horizontal we use justify content  */
+    justify-content: flex-end;
+    padding-right: 150px;
+}
+
+header nav ul{
+    margin: 0;
+    display: flex;
+    /* for vertically we can say align items */
+    align-items: center;
+    gap: 50px; 
+}
+
+header nav li{
+    list-style: none;
+}
+
+header nav li a{
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 20px;
+    text-align: right;
+    color: black;
+    behavior: smooth;
+}
+
+header nav li a:hover{
+	border-bottom: 4px solid rgb(172, 54, 129);
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown button{
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  border-bottom: 4px solid rgb(172, 54, 129);
+}
+
+form{
+  max-width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 25px;
+  margin-left: 60px;
+  margin-right: 35px;
+}
+
+#info-left{
+  max-width: 45%;
+  margin-bottom: 20px;
+}
+
+#ship-add{
+  display: flex;
+  margin-left: 50px;
+  letter-spacing: 1.5px;
+  max-width: 82%;
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.user-box label{
+  position: relative;
+	color: black;
+	margin-left: 50px;
+	padding: 10px 0;
+	pointer-events: none;
+}
+
+.user-box input{
+  position: relative;
+	width: 80%;
+  margin-left: 50px;
+	padding: 10px;
+	color: black;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	margin-bottom: 25px;
+	font-size: 16px;
+	background: transparent;
+}
+
+#ship-address{
+  margin-left: 50px;
+}
+
+#text{
+  display: block;
+  margin-left: 50px;
+  margin-top: -20px;
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  padding: 2px;
+}
+
+#prod-code{
+  display: block;
+  margin-left: 50px;
+  margin-top: -20px;
+  color: #000;
+  font-weight: 400;
+  font-style: italic;
+  padding: 2px;
+}
+
+#info-right{
+  width: 45%;
+  float: right;
+  margin-top: -830px;
+  margin-right: 450px;
+}
+
+#payment{
+  display: flex;
+  letter-spacing: 1.5px;
+  width: 500px;
+  margin-left: 450px;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 25px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.user-input{
+  width: 500px;
+  margin-left: 450px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+}
+
+#btn{
+  width: 500px;
+  margin-left: 450px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#btn button{
+  margin-left: 40px;
+  padding: 10px 150px;
+  background-color: #C0392B;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#btn button:hover{
+	background-color: #D35400;
+}
+
+.sub-footer{
+	max-width: 100%;
+	background-color: #CACFD2;
+	text-align: center;
+}
+
+#subscribe{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 30px;
+	margin: 30px auto;
+	padding-top: 15px;
+}
+
+#inbox-msg{
+	font-size: 12px;
+	color: grey;
+}
+
+#form{
+	border: 2px solid black;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+	padding: 5px 10px;
+	border-radius: 4px;
+	box-shadow: 4px 4px 4px #aaa;
+}
+
+#button{
+	box-shadow: 4px 4px 4px #aaa;
+	border: 2px solid black;
+	padding: 5px 10px;
+	margin-left: -5px;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+	font-weight: 500;
+}
+
+.footer{
+	max-width: 100%;
+	background-color: white;
+	padding: 30px;
+	display: flex;
+}
+
+.div-1 button{
+	border: 1px solid;
+	border-radius: 15px;
+	background-color: #28B463;
+	color: white;
+	margin: 20px 5px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+button:hover{
+	transition: all .5s ease;
+	font-size: 15px;
+}
+
+.icon i{
+	display: inline-block;
+	margin: 10px 10px;
+	position: relative;
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.footer-about{
+	float: left;
+	align-items: center;
+	margin: 10px 80px;
+}
+
+.footer-about a{
+	line-height: 2.5;
+	color: grey;
+	text-decoration: none;
+}
+
+.footer-account{
+	float: left;
+	align-items: center;
+	margin: 10px 80px;
+}
+
+.footer-account a{
+	line-height: 2.5;
+	color: grey;
+	text-decoration: none;
+}
+
+.footer-care{
+	float: left;
+	align-items: center;
+	margin: 10px 80px;
+}
+
+.footer-care a{
+	line-height: 2.5;
+	color: grey;
+	text-decoration: none;
+}
